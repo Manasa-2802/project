@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+ .body{
+background-color: aliceblue;
+font-family: 'poppins',sans-serif;
+ }
+ .menu{
+    padding:0 10px  30px 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax (350px ,1fr));
+    grid-gap: 20px 40px;
+
+ }
+ /* MAIN COURSE*/
+
+ .heading{
+background-color: red;
+color: antiquewhite;
+margin-bottom: 30px 0 ;
+padding: 30px;
+grid-column: 1/-1;
+text-align: center;
+ }
+ .heading>h1{
+
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 15px;
+    margin-bottom: 10px;
+
+ }
+ 
+
+ .heading>h3{
+font-weight: 400;
+font-size: 25px;
+letter-spacing: 10px;
+
+ }
+ /* SIDES */
+ .heading1{
+   background-color: red;
+   color: antiquewhite;
+   margin-bottom: 30px;
+   padding: 30px;
+   grid-column: 1/-1;
+   text-align: center;
+    }
+    .heading1>h1{
+       font-weight: 600;
+       font-size: 30px;
+       letter-spacing: 15px;
+       margin-bottom: 10px;
+   
+    }
+   
+    .heading1>h3{
+   font-weight: 400;
+   font-size: 25px;
+   letter-spacing: 10px;
+   margin-bottom: 10px;
+    }
+
+    /* DRINKS*/
+
+
+    .heading2{
+      background-color: red;
+      color: antiquewhite;
+      margin-bottom: 30px;
+      padding: 30px;
+      grid-column: 1/-1;
+      text-align: center;
+       }
+       .heading2>h1{
+          font-weight: 600;
+          font-size: 30px;
+          letter-spacing: 15px;
+          margin-bottom: 10px;
+      
+       }
+      
+       .heading2>h3{
+      font-weight: 400;
+      font-size: 25px;
+      letter-spacing: 10px;
+       }
+   
+
+
+    /*ITEMS*/
+
+ .food-items{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0,1);
+ }
+ .food-items img{
+position: relative;
+width:100%;
+border-radius: 15px 15px  0 0;
+ }
+
+ .h1{
+    grid-column:1/-1;
+    text-align:center ;
+
+ }
+ .details{
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-row-gap: 20px;
+
+ }
+ .details-sub{
+    display: grid;
+    grid-template-columns: auto auto;
+
+ }
+ .details-sub>h5{
+    font-weight: 600;
+    font-size: 30px;
+
+ }
+ .price{
+    text-align: right;
+padding: 10px 21px;
+ }
+ .details>p{
+    color:whitesmoke ;
+    padding-top: 5px;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    align-self: stretch;
+ }
+ .details-sub >button
+ {
+   background-color: red;
+    padding:10px 35px;
+    border: none;
+    color: rgb(250, 239, 239);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius:5px;
+    text-align: center;
+    width:190px;
+    text-align: left;
+    
+    
+ }
+/*     REVIEW     */
+.review .box-contra{
+   display: flex;
+   flex-wrap: wrap;
+   gap:1.5rem;
+
+}
+.review .box-contra .box{
+   flex: 1 1 30rem;
+   box-shadow: 0 .5rem  1.5rem rgba(0,0,0,.1);
+   border-radius: .5rem;
+   padding: 3rem 2rem;
+   position: relative;
+}
+.review .box-contra .box .fa-quote-right{
+   position: absolute;
+   bottom: 3rem; right: 3rem;
+   font-size: 6rem;
+   color: antiquewhite;
+}
