@@ -100,79 +100,71 @@ letter-spacing: 10px;
     grid-template-rows: auto 1fr;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0,0,0,0,1);
+    gap: 1.5rem;
  }
- .food-items img{
+ .food-items .box{
+   flex: 1 1 30rem;
+   margin:1rem;
+   padding:2rem;
+   background:rgb(244, 239, 239);
+   border:.1rem solid rgba(250, 7, 7, 0.1);
+   text-align: center;
+   width:27rem;
+}
+ 
+
+  .food-items .box img{
 position: relative;
-width:100%;
-border-radius: 15px 15px  0 0;
+width:50%;
+border-radius: 15px 15px  15px 15px;
  }
 
- .h1{
+ .food-items .box .h1{
     grid-column:1/-1;
     text-align:center ;
 
  }
- .details{
+ .food-items .box .details{
     padding: 20px 10px;
     display: grid;
     grid-template-rows: auto auto;
     grid-row-gap: 20px;
 
  }
- .details-sub{
+ .food-items .box .details-sub{
     display: grid;
     grid-template-columns: auto auto;
 
  }
- .details-sub>h5{
+  .food-items .box .details-sub>h5{
     font-weight: 600;
     font-size: 30px;
 
  }
- .price{
+ .food-items .box .price{
     text-align: right;
-padding: 10px 21px;
+   padding: 10px 21px;
  }
- .details>p{
+ .food-items .box .details>p{
     color:whitesmoke ;
     padding-top: 5px;
-    font-size: 15px;
+    font-size: 10px;
     line-height: 28px;
     font-weight: 400;
     align-self: stretch;
  }
- .details-sub >button
+ .food-items .box .details-sub >button
  {
    background-color: red;
-    padding:10px 35px;
+    padding:13px 35px;
     border: none;
     color: rgb(250, 239, 239);
     font-size: 16px;
     font-weight: 600;
     border-radius:5px;
     text-align: center;
-    width:190px;
+    width:150px;
     text-align: left;
     
     
  }
-/*     REVIEW     */
-.review .box-contra{
-   display: flex;
-   flex-wrap: wrap;
-   gap:1.5rem;
-
-}
-.review .box-contra .box{
-   flex: 1 1 30rem;
-   box-shadow: 0 .5rem  1.5rem rgba(0,0,0,.1);
-   border-radius: .5rem;
-   padding: 3rem 2rem;
-   position: relative;
-}
-.review .box-contra .box .fa-quote-right{
-   position: absolute;
-   bottom: 3rem; right: 3rem;
-   font-size: 6rem;
-   color: antiquewhite;
-}
