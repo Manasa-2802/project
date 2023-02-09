@@ -53,6 +53,7 @@ body::before{
 }
 .content .image-box img{
   width: 100%;
+
 }
 .content .topic{
   font-size: 22px;
@@ -106,6 +107,7 @@ body::before{
 }
 .content .message-box{
   min-height: 100px;
+  margin: 16px 0;
   position: relative;
 }
 .content .message-box textarea{
@@ -113,13 +115,25 @@ body::before{
   height: 100%;
   width: 100%;
   resize: none;
-  background: #f8eaaa;
+  background: #ddc3a9;
+  padding-left: 16px;
   border: 2px solid transparent;
   border-radius: 6px;
   outline: none;
   transition :all 0.3s ease;
 }
-.content .message-box textarea:focus{
+
+.content .message-box input:focus,
+.content .message-box input:valid{
+  border-color: #f8f7f7;
+  background-color: #f4f3f3;
+}
+
+.content .message-box textarea:focus ~ label
+.content .message-box textarea:valid ~ label{
+  top: 0;
+  left: 12px;
+  display: 14px;
   border-color: #f7863c;
   background-color: #fad59a;
 }
@@ -130,6 +144,7 @@ body::before{
   left: 18px;
   top: 6px;
   pointer-events: none;
+  transform: translateY(-50%);
   transition: all 0.3s ease;
 }
 .content .message-box textarea:focus ~ label{

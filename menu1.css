@@ -151,16 +151,16 @@ border-radius: 15px 15px  15px 15px;
     font-size: 10px;
     line-height: 28px;
     font-weight: 400;
-    align-self: stretch;
+    align-self:inherit; 
  }
  .food-items .box .details-sub >button
  {
    background-color: red;
-    padding:13px 35px;
+    padding:13px;
     border: none;
     color: rgb(250, 239, 239);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     border-radius:5px;
     text-align: center;
     width:150px;
