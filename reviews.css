@@ -29,7 +29,8 @@
 
 .board{
     max-width: 987px;
-    width: 100%;
+    width: 70%;
+    height: 89%;
     background-color: var(--color-dark);
     text-align: center;
     border-radius: 8px;
@@ -98,6 +99,7 @@
     color: var(--color-text);
     font-size: .8em;
 }
+
 
 .swiper .swiper-button-prev, .swiper-button-next{
     color: var(--color-text);
