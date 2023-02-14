@@ -111,12 +111,21 @@ letter-spacing: 10px;
    text-align: center;
    width:27rem;
 }
- 
+
+.products .box-container .box .imgg{
+   width:5px;
+   top:1rem; left:1rem;
+   padding:.7rem 1rem;
+   background:rgba(2, 69, 32, 0.05);
+   z-index: 1;
+   border-radius:.5rem;
+  
+}
 
   .food-items .box img{
 position: relative;
 width:50%;
-border-radius: 15px 15px  15px 15px;
+
  }
 
  .food-items .box .h1{

@@ -246,7 +246,7 @@ transition: ease-in-out;
    /*Utility Classes*/ 
 
  .h-primary{
-    font-family:  sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
     font-size: 3.8rem;
     padding: 90px ;
     font-style: italic;
@@ -260,16 +260,6 @@ transition: ease-in-out;
     padding: 12px ;
     font-style: italic;
   }
- .btn{
-    padding: 6px 12px ;
-    border: 1px solid white;
-    background-color: brown;
-    color: white ;
-    margin: 17px;
-    border-radius: 10px;
-    font-size: 1.5rem ;
-    cursor: pointer;
-    }
-
+ 
 
    
