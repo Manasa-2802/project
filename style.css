@@ -107,6 +107,11 @@ background-color:black;
     text-align: initial ;
     font-size: 3.3rem;
 }
+#home h5{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+       font-size: 2rem;
+       color: red;
+}
 
 #home p{
     color: rgb(33, 6, 6);
