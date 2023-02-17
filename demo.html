@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listing</title>
+</head>
+<body>
+    <h1>Listing</h1>
+    <div id="list"></div>
+    <script>
+        var products = [
+            {
+                id: 1,
+                name: 'abc',
+                image: "./rev(img)/divya.jpg"
+            },
+            {
+                id: 2,
+                name: 'xyz',
+                image: "./rev(img)/divya.jpg"
+            },
+            {
+                id: 3,
+                name: 'pqr',
+                image: "./rev(img)/divya.jpg"
+            },
+            {
+                id: 4,
+                name: 'ijk',
+                image: "./rev(img)/divya.jpg"
+            }
+        ];
+        const list = document.getElementById("list");
+        products.forEach((prod) => {
+            let name = document.createElement("h1");
+            name.innerHTML = prod.name;
+            let image = document.createElement("img");
+            image.src = prod.image;
+            name.addEventListener("click",(ev) => {
+                console.log('clicked ',prod.id);
+            })
+            list.appendChild(name);
+            list.appendChild(image);
+        })
+    </script>
+</body>
+</html>
