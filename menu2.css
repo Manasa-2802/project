@@ -18,6 +18,16 @@
   background: #095C91;
   margin-bottom: 10px;
 }
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 6rem;
+  background: #095C91;
+  margin-bottom: 10px;
+}
+
 
 .food-container {
   display: grid;
