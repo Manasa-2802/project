@@ -24,22 +24,22 @@
                  <img src="google.jpg">
                 <img src="twitter.jpg.jpg">
             </div>
-            <form action="connect.php" method="post">
-            <form id="login" class="input-group " >
-                <input type="text" class="input-field" placeholder="User Id"required>
-                <input type="text" class="input-field" placeholder="Enter Password"required>
+          
+            <form id="login" class="input-group " action="login.php" method="post" >
+                <input type="text" name="username" class="input-field" placeholder="UserName"required>
+                <input type="text"  name="password"class="input-field" placeholder="Enter Password"required>
                 <input type="checkbox" class="checkbox"><span>Remember Password</span>
-                <button type="submit" class="submit-btn" >Log In</button>
+                <button type="submit"  name="submit" href="menu1.html" class="submit-btn" >Log In</button>
                 
             </form>
 
-            <form id= "register" class="input-group" action="connect.php" method="post">
-                <input type="text" class="input-field" placeholder="User Id"required>
-                <input type="email" class="input-field" placeholder="Email Id"required>
-                <input type="text" class="input-field" placeholder="Enter Password"required>
-
+            <form id= "register" class="input-group" action="reg.php" method="post">
+                <input type="text"  name="username" class="input-field" placeholder="username"required>
+                <input type="email" name="email"class="input-field" placeholder="Email Address"required>
+                <input type="number"name="phone" class="input-field" placeholder="Enter Phone Number"required>
+                <input type="text"  name="password"  class="input-field" placeholder="Enter Password"required>
                 <input type="checkbox" class="checkbox"><span>I agree to the  terms & conditons</span>
-                <button type="submit" class="submit-btn">Register</button><a href="#login"></a>
+                <button type="submit"  name="submit" href="#login" class="submit-btn">Register</button>
 
             </form>
             </form>

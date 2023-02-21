@@ -13,14 +13,13 @@
   </head>
   <body>
     <section>
-      <button class="show-modal">CONFIRM ORDER</button>
+      <button class="show-modal" onclick="orderSucess()">CONFIRM ORDER</button>
       <span class="overlay"></span>
 
       <div class="modal-box">
         <i class="fa-regular fa-circle-check"></i>
         <h2>order successfull</h2>
         <h3>Your order has been palced successfully.</h3>
-
        
       </div>
     </section>
@@ -40,6 +39,12 @@
       closeBtn.addEventListener("click", () =>
         section.classList.remove("active")
       );
+      function orderSucess() {
+        sessionStorage.clear();
+        setTimeout(() => {
+          window.location = `./index.html`
+        },3000)
+      }
     </script>
   </body>
 </html>

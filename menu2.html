@@ -16,6 +16,7 @@
 				<div class="heading">
 					<h1>PIZZERIA</h1>
 					<h3>&mdash; MENU &mdash;</h3>
+          <a onclick="goToCart()">Go To Cart</a>
 				</div>
 				<div class="food-container">
 					<div class="food-items">
@@ -41,7 +42,7 @@
                 </div>
               </div>
               <div class="btn-container">
-                <button class="cart-btn">Add to cart</button>
+                <button class="cart-btn" onclick="addToCart('img/pepperoni-pizza.jpg.jpg',129,'Pepperoni-pizza')">Add to cart</button>
                 <button class="cart-btn">Buy now</button>
               </div>
             </div>
@@ -58,7 +59,7 @@
               </div>
               <p>
                 Tandoori is rich,spicy and tangy.Also
-                loaded with fresh Chicken
+                loaded with fresh Panner.
               </p>
               <div class="price-container">
                 <span class="price">₹279</span>
@@ -69,7 +70,7 @@
                 </div>
               </div>
               <div class="btn-container">
-                <button class="cart-btn">Add to cart</button>
+                <button class="cart-btn"  onclick="addToCart('img/tanoori panner.jpg.jpg',279,'Tandoori Panner Pizza')">Add to cart</button>
                 <button class="cart-btn">Buy now</button>
               </div>
             </div>
@@ -120,51 +121,62 @@
 
 
 					<div class="food-items">
-            <img
-              src="img//tasty-mushroom-onion.jpg.jpg"
-              alt=""
-            />
+            <img src="img//cheesy momo mia veg.jpg.jpg"
+              alt=""/>
             <div class="details">
-              <h5>Mushroom Pizza</h5>
-              <h5 class="price">₹289</h5>
-              <p>Nutty ,Earthy and Meaty</p>
-              <button>ADD TO CART</button>
-            </div>
-					</div>
-
-					<div class="food-items">
-            <img
-              src="img//cheesy momo mia veg.jpg.jpg"
-              alt=""
-            />
-            <div class="details">
-              <div class="details-sub">
+               <div class="pizza-name">
                 <h5>Momo-Mia Veg Pizza</h5>
-                <h5 class="price">₹479</h5>
+                <div class="veg">
+                  <div class="dot-green"></div>
+                </div>
+                </div>
                 <p>
                   If you like Pizza and Momos you can't
                   possibly hate Momo-Mia Pizza
                 </p>
-                <button>ADD TO CART</button>
+                <div class="price-container">
+                <span class="price">₹479</span>
+                     <div>
+                  <button class="btn" onclick="decrement()">-</button>
+                  <span class="quantity" id="qty">1</span>
+                  <button class="btn" onclick="increment()">+</button>
+                </div>
+                </div>
+                <div class="btn-container">
+                <button class="cart-btn">Add to cart</button>
+                <button class="cart-btn">Buy now</button>
               </div>
+             
             </div>
 					</div>
 
 					<div class="food-items">
-            <img
-              src="img//pizza-shrimp-salmon-olives.jpg"
-              alt=""
-            />
+            <img src="img//pizza-shrimp-salmon-olives.jpg"  alt=""/>
             <div class="details">
-              <div class="details-sub">
-                <h5>Shrimp Pizza</h5>
-                <h5 class="price">₹339</h5>
+                  <div class="pizza-name">
+                   <h5>Shrimp Pizza</h5>
+                   <div class="veg">
+                  <div class="dot-red"></div>
+                </div>
+                </div>
                 <p>
                   A big flavor filled with buttery Shrimp
                 </p>
-                <button>ADD TO CART</button>
+                <div class="price-container">
+                <span class="price">₹339</span>
+                 <div>
+                  <button class="btn" onclick="decrement()">-</button>
+                  <span class="quantity" id="qty">1</span>
+                  <button class="btn" onclick="increment()">+</button>
+                </div>
+                </div>
+                <div class="btn-container">
+                <button class="cart-btn">Add to cart</button>
+                <button class="cart-btn">Buy now</button>
               </div>
-            </div>
+                
+              </div>
+            
 					</div>
 
 					<div class="food-items">
