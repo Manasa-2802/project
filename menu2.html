@@ -7,18 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>menu page</title>
   <link rel="stylesheet" href="menu2.css" />
-  <style>
-
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
 </head>
 
 <body>
   <main class="menu">
     <section>
       <div class="heading">
-        <h1>PIZZERIA</h1>
-        <h3>&mdash; MENU &mdash;</h3>
-        <a onclick="goToCart()">Go To Cart</a>
+        <div>
+          <h1>PIZZERIA</h1>
+          <h3>&mdash; MENU &mdash;</h3>
+        </div>
+        <div class="cart-icon" onclick="goToCart()">
+          <div class="cart-value" id="cart-value">0</div>
+          <a><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
       </div>
       <div class="food-container">
         <div class="food-items">
@@ -38,13 +41,13 @@
             <div class="price-container">
               <span class="price">₹129</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
+                <button class="btn" onclick="decrement('qty')">-</button>
                 <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="increment('qty')">+</button>
               </div>
             </div>
             <div class="btn-container">
-              <button class="cart-btn" onclick="addToCart('img/pepperoni-pizza.jpg.jpg',129,'Pepperoni-pizza')">Add to
+              <button class="cart-btn" onclick="addToCart('img/pepperoni-pizza.jpg.jpg',129,'Pepperoni-pizza','qty')">Add to
                 cart</button>
               <button class="cart-btn">Buy now</button>
             </div>
@@ -67,13 +70,13 @@
             <div class="price-container">
               <span class="price">₹279</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty1')">-</button>
+                <span class="quantity" id="qty1">1</span>
+                <button class="btn" onclick="increment('qty1')">+</button>
               </div>
             </div>
             <div class="btn-container">
-              <button class="cart-btn" onclick="addToCart('img/tanoori panner.jpg.jpg',279,'Tandoori Panner Pizza')">Add
+              <button class="cart-btn" onclick="addToCart('img/tanoori panner.jpg.jpg',279,'Tandoori Panner Pizza','qty1')">Add
                 to cart</button>
               <button class="cart-btn">Buy now</button>
             </div>
@@ -96,13 +99,13 @@
             <div class="price-container">
               <span class="price">₹259</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty2')">-</button>
+                <span class="quantity" id="qty2">1</span>
+                <button class="btn" onclick="increment('qty2')">+</button>
               </div>
             </div>
             <div class="btn-container">
-              <button class="cart-btn" onclick="addToCart('img/farm-House-Pizza-Veg.jpg.jpg',259,'FarmHouse Pizza')">Add
+              <button class="cart-btn" onclick="addToCart('img/farm-House-Pizza-Veg.jpg.jpg',259,'FarmHouse Pizza','qty2')">Add
                 to cart</button>
               <button class="cart-btn">Buy now</button>
             </div>
@@ -127,9 +130,9 @@
             <div class="price-container">
               <span class="price">₹479</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty2')">-</button>
+                <span class="quantity" id="qty3">1</span>
+                <button class="btn" onclick="increment('qty3')">+</button>
               </div>
             </div>
             <div class="btn-container">
@@ -156,9 +159,9 @@
             <div class="price-container">
               <span class="price">₹339</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty4')">-</button>
+                <span class="quantity" id="qty4">1</span>
+                <button class="btn" onclick="increment('qty4')">+</button>
               </div>
             </div>
             <div class="btn-container">
@@ -187,13 +190,13 @@
             <div class="price-container">
               <span class="price">₹256</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty5')">-</button>
+                <span class="quantity" id="qty5">1</span>
+                <button class="btn" onclick="increment('qty5')">+</button>
               </div>
             </div>
             <div class="btn-container">
-              <button class="cart-btn" onclick="addToCart('img/pizza-margherita',256,'Margherita Pizza')">Add to
+              <button class="cart-btn" onclick="addToCart('img/pizza-margherita.jpg',256,'Margherita Pizza')">Add to
                 cart</button>
               <button class="cart-btn">Buy now</button>
             </div>
@@ -219,13 +222,13 @@
               <span class="price">₹299</span>
 
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty6')">-</button>
+                <span class="quantity" id="qty6">1</span>
+                <button class="btn" onclick="increment('qty6')">+</button>
               </div>
             </div>
             <div class="btn-container">
-              <button class="cart-btn" onclick="addToCart('./img/butter-chicken-pizza',299,'Butter Chicken  Pizza')">Add
+              <button class="cart-btn" onclick="addToCart('./img/butter-chicken-pizza.jpg',299,'Butter Chicken  Pizza')">Add
                 to cart</button>
               <button class="cart-btn">Buy now</button>
             </div>
@@ -245,9 +248,9 @@
             <div class="price-container">
               <span class="price">₹199</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty7')">-</button>
+                <span class="quantity" id="qty7">1</span>
+                <button class="btn" onclick="increment('qty7')">+</button>
               </div>
             </div>
 
@@ -277,9 +280,9 @@
             <div class="price-container">
               <span class="price">₹319</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty8')">-</button>
+                <span class="quantity" id="qty8">1</span>
+                <button class="btn" onclick="increment('qty8')">+</button>
               </div>
             </div>
 
@@ -309,14 +312,14 @@
             <div class="price-container">
               <span class="price">₹196</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty9')">-</button>
+                <span class="quantity" id="qty9">1</span>
+                <button class="btn" onclick="increment('qty9')">+</button>
               </div>
             </div>
 
             <div class="btn-container">
-              <button class="cart-btn" onclick="addToCart('img/veg-exotica.png.png',196,'Veg Exotica Pizza')">Add to
+              <button class="cart-btn" onclick="addToCart('img/veg-exotica.png.png',196,'Veg Exotica Pizza','qty9')">Add to
                 cart</button>
               <button class="cart-btn">Buy now</button>
             </div>
@@ -340,9 +343,9 @@
             <div class="price-container">
               <span class="price">₹259</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty10')">-</button>
+                <span class="quantity" id="qty10">1</span>
+                <button class="btn" onclick="increment('qty10')">+</button>
               </div>
             </div>
 
@@ -373,9 +376,9 @@
             <div class="price-container">
               <span class="price">₹159</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty11')">-</button>
+                <span class="quantity" id="qty11">1</span>
+                <button class="btn" onclick="increment('qty11')">+</button>
               </div>
             </div>
             <div class="btn-container">
@@ -409,9 +412,9 @@
             <div class="price-container">
               <span class="price">₹159</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty12')">-</button>
+                <span class="quantity" id="qty12">1</span>
+                <button class="btn" onclick="increment('qty12')">+</button>
               </div>
             </div>
             <div class="btn-container">
@@ -437,9 +440,9 @@
             <div class="price-container">
               <h5 class="price">₹160</h5>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qt13')">-</button>
+                <span class="quantity" id="qty13">1</span>
+                <button class="btn" onclick="increment('qty13')">+</button>
               </div>
             </div>
 
@@ -463,9 +466,9 @@
             <div class="price-container">
               <span class="price">₹196</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty14')">-</button>
+                <span class="quantity" id="qty14">1</span>
+                <button class="btn" onclick="increment('qty14')">+</button>
               </div>
             </div>
             <div class="btn-container">
@@ -490,9 +493,9 @@
             <div class="price-container">
               <span class="price">₹179</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty15')">-</button>
+                <span class="quantity" id="qty15">1</span>
+                <button class="btn" onclick="increment('qty15')">+</button>
               </div>
             </div>
 
@@ -517,9 +520,9 @@
             <div class="price-container">
               <span class="price">₹119</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty16')">-</button>
+                <span class="quantity" id="qty16">1</span>
+                <button class="btn" onclick="increment('qty16')">+</button>
               </div>
             </div>
 
@@ -551,9 +554,9 @@
             <div class="price-container">
               <span class="price">₹59</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty17')">-</button>
+                <span class="quantity" id="qty17">1</span>
+                <button class="btn" onclick="increment('qty17')">+</button>
               </div>
             </div>
             <div class="btn-container">
@@ -576,9 +579,9 @@
             <div class="price-container">
               <span class="price">₹50</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty18')">-</button>
+                <span class="quantity" id="qty18">1</span>
+                <button class="btn" onclick="increment('qty18')">+</button>
               </div>
             </div>
 
@@ -604,9 +607,9 @@
             <div class="price-container">
               <span class="price">₹40</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty19')">-</button>
+                <span class="quantity" id="qty19">1</span>
+                <button class="btn" onclick="increment('qty19')">+</button>
               </div>
             </div>
 
@@ -630,9 +633,9 @@
             <div class="price-container">
               <span class="price">₹30</span>
               <div>
-                <button class="btn" onclick="decrement()">-</button>
-                <span class="quantity" id="qty">1</span>
-                <button class="btn" onclick="increment()">+</button>
+                <button class="btn" onclick="decrement('qty20')">-</button>
+                <span class="quantity" id="qty20">1</span>
+                <button class="btn" onclick="increment('qty20')">+</button>
               </div>
             </div>
             <div class="btn-container">

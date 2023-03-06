@@ -37,7 +37,7 @@ function renderUI(cartListingProduct) {
 
         const productQuantity = document.createElement("p");
         productQuantity.classList.add("product-quantity");
-        productQuantity.innerHTML = `Qnt: <input value="1" name="">`;
+        productQuantity.innerHTML = `Qnt: <input value="${prod.qty}" name="">`;
         productInfo.appendChild(productQuantity);
 
         const productRemove = document.createElement("p");
@@ -53,7 +53,7 @@ function renderUI(cartListingProduct) {
         product.appendChild(productInfo);
 
         productsDiv.appendChild(product);
-        totalAmount += prod.price;
+        totalAmount += prod.price * prod.qty;
     });
 
     const totalPrice = document.getElementById("total-price");

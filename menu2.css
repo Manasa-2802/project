@@ -13,19 +13,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   height: 6rem;
   background: #095C91;
   margin-bottom: 10px;
 }
-.heading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 6rem;
-  background: #095C91;
-  margin-bottom: 10px;
+
+.cart-icon {
+  position: relative;
+  left: 32rem;
+  cursor: pointer;
+  bottom: 11px;
+}
+
+.cart-value {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #8fd985;
+  text-align: center;
+  position: relative;
+  right: 5px;
+  top: 8px;
+}
+
+.cart-icon i {
+  font-size: 2rem;
 }
 
 

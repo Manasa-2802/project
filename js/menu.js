@@ -1,12 +1,15 @@
-function increment() {
-  const qty = document.getElementById('qty');
+var cartVal = 0;
+var cart = document.getElementById("cart-value");
+
+function increment(id) {
+  const qty = document.getElementById(id);
   let val = parseInt(qty.innerHTML) + 1;
   console.log(val);
   qty.innerHTML = val;
 }
 
-function decrement() {
-  const qty = document.getElementById('qty');
+function decrement(id) {
+  const qty = document.getElementById(id);
   let val = parseInt(qty.innerHTML) - 1;
   if (val < 1) {
     val = 1;
@@ -15,8 +18,9 @@ function decrement() {
   qty.innerHTML = val;
 }
 
-function addToCart(img,price,name) {
-  let data = [{name,img,price}];
+function addToCart(img,price,name,qtyID) {
+  const qty = parseInt(document.getElementById(qtyID).innerText);
+  let data = [{name,img,price,qty}];
   const storedData = sessionStorage.getItem("cartItems");
   if (storedData) {
     const temp = JSON.parse(storedData);
@@ -24,6 +28,8 @@ function addToCart(img,price,name) {
     console.log(data);
   }
   sessionStorage.setItem("cartItems",JSON.stringify(data));
+  cartVal++;
+  cart.innerText = cartVal;
 }
 
 
